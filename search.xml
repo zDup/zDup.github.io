@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[123]]></title>
+    <url>%2F2019%2F05%2F08%2F123%2F</url>
+    <content type="text"><![CDATA[这是我的测试zD。]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[test1]]></title>
+    <url>%2F2019%2F05%2F08%2Ftest1%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[test]]></title>
     <url>%2F2019%2F05%2F08%2Ftest%2F</url>
     <content type="text"><![CDATA[这个是测试]]></content>

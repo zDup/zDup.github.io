@@ -420,19 +420,19 @@
 <ul>
 <li><p>libsvm的使用主要是代码的调用，其中的数据文件中需要四个文本，一个测试数据test.txt，一个训练数据train.txt，一个模型数据moder_r .txt,一个输出数据out_r.txt，数据文件的路径可以随便放，但一定要知道路径，主函数代码如下：</p>
 <pre><code>public static void main(String[] args)  throws IOException {
-    // TODO Auto-generated method stub
+      // TODO Auto-generated method stub
 
- String[] arg= {&quot;G:\\java\\libsvm\\src\\service\\trainfile\\trainSVM.txt&quot;,
-         &quot;G:\\java\\libsvm\\src\\service\\trainfile\\model_r.txt&quot;};
- String  []parg= {&quot;G:\\java\\libsvm\\src\\service\\trainfile\\testSVM.txt&quot;,
-         &quot;G:\\java\\libsvm\\src\\service\\trainfile\\model_r.txt&quot;,&quot;G:\\java\\libsvm\\src\\service\\trainfile\\out_r.txt&quot;};
- System.out.println(&quot;.....SVM运行开始. . . . . .&quot;);
- svm_train t=new svm_train();
- svm_predict p=new svm_predict();
- t.main(arg);
- p.main(parg);
+   String[] arg= {&quot;G:\\java\\libsvm\\src\\service\\trainfile\\trainSVM.txt&quot;,
+           &quot;G:\\java\\libsvm\\src\\service\\trainfile\\model_r.txt&quot;};
+   String  []parg= {&quot;G:\\java\\libsvm\\src\\service\\trainfile\\testSVM.txt&quot;,
+           &quot;G:\\java\\libsvm\\src\\service\\trainfile\\model_r.txt&quot;,&quot;G:\\java\\libsvm\\src\\service\\trainfile\\out_r.txt&quot;};
+   System.out.println(&quot;.....SVM运行开始. . . . . .&quot;);
+   svm_train t=new svm_train();
+   svm_predict p=new svm_predict();
+   t.main(arg);
+   p.main(parg);
 
-}
+  }
 </code></pre></li>
 </ul>
 <ul>
@@ -443,7 +443,7 @@
 </li>
 </ul>
 <h2 id="后言"><a href="#后言" class="headerlink" title="后言"></a>后言</h2><p>​     libsvm其实还需要计算出其中的最优参数c与g，这个好像要使用python的方法，当然libsvm也存在要对数据进行一个归一化的处理，好像是调用svm_scale的方法，java中的调用我没有看懂，所以只算了一个预测的准确率。推荐使用windows的方法来实现libsvm，操作简易并且不需要安软件。</p>
-<p> <a href="1、&lt;http://blog.csdn.net/chl033/article/details/4645544">Python的使用方法</a></p>
+<p> <a href="http://blog.csdn.net/chl033/article/details/4645544" target="_blank" rel="noopener">Python的使用方法</a></p>
 <p><a href="https://www.tanglei.name/blog/an-example-for-beginning-to-learn-libsvm.html" target="_blank" rel="noopener">Windows的使用方法</a></p>
 
           

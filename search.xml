@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[123]]></title>
+    <title><![CDATA[libsvm如何在java中进行使用]]></title>
     <url>%2F2019%2F05%2F08%2F123%2F</url>
-    <content type="text"><![CDATA[这是我的测试zD。]]></content>
+    <content type="text"><![CDATA[libsvm的基本介绍Libsvm是台湾大学林智仁(Chih-Jen Lin)博士等开发设计的一个操作简单、易于使用、快速有效的通用SVM 软件包，可以解决分类问题（包括C- SVC、n - SVC ）、回归问题（包括e - SVR、n - SVR ）以及分布估计（one-class-SVM ）等问题，提供了线性、多项式、径向基和S形函数四种常用的核函数供选择，可以有效地解决多类问题、交叉验证选择参数、对不平衡样本加权、多类问题的概率估计等。Libsvm是一个开源的软件包，需要者都可以免费的从作者的个人主页http://www.csie.ntu.edu.tw/~cjlin/ 处获得。不仅提供了Libsvm的C++语言的算法源代码，还提供了Python、Java、R、MATLAB、Perl、Ruby、LabVIEW以及C#.net 等各种语言的接口，可以方便的在Windows 或UNIX 平台下使用，也便于科研工作者根据自己的需要进行改进（譬如设计使用符合自己特定问题需要的核函数等）。 libsvm的一般使用步骤 按照Libsvm软件包所要求的格式准备数据集； 对数据进行简单的缩放操作； 考虑选用RBF 核函数2 K(x,y) e x y = -g - ； 采用交叉验证选择最佳参数C与g； 采用最佳参数C与g对整个训练集进行训练获取支持向量机模型； 利用获取的模型进行测试与预测。 libsvm中数据的预处理由于libsvm实验中给出的数据并不是标准的libsvm数据模式，所以我们要对原本给出的测试数据和训练数据进行一个预处理，处理的方法我是才用的是excle的宏的使用，首先我们需要在网上下载一个叫FormatDataLibsvm.xls的一个表格。打开表格第一步一定要启用宏，这在excle的上方。 在excle的文件选项中打开我们需要预处理的数据文件，打开过程中设置我们数据格式，如下图，添加空格选项。 然后文件导入向导一直下一步，直到完成文件导入，然后在Excel上方搜索查看宏，并选择FormatDataToLibsvm的选项，点击执行，就能成功的改变数据的模式，每一列应该都是:的样子。 libsvm如何在java中实现 从介绍中的个人主页中下载资源，其中有一个java文件就是我们要使用的东西 创建一个项目，在创建两个包，一个来包导入java文件中libsvm文件的内容，也可以复制粘贴到我们命名libsvm的这个包中，另一个包来写存java根目录下的四个java文件，之后我会把我的数据文件和主函数comMain（自己创建）都会放在这个包中进行操作。大概情况如下： libsvm的使用主要是代码的调用，其中的数据文件中需要四个文本，一个测试数据test.txt，一个训练数据train.txt，一个模型数据moder_r .txt,一个输出数据out_r.txt，数据文件的路径可以随便放，但一定要知道路径，主函数代码如下： public static void main(String[] args) throws IOException { // TODO Auto-generated method stub String[] arg= {&quot;G:\\java\\libsvm\\src\\service\\trainfile\\trainSVM.txt&quot;, &quot;G:\\java\\libsvm\\src\\service\\trainfile\\model_r.txt&quot;}; String []parg= {&quot;G:\\java\\libsvm\\src\\service\\trainfile\\testSVM.txt&quot;, &quot;G:\\java\\libsvm\\src\\service\\trainfile\\model_r.txt&quot;,&quot;G:\\java\\libsvm\\src\\service\\trainfile\\out_r.txt&quot;}; System.out.println(&quot;.....SVM运行开始. . . . . .&quot;); svm_train t=new svm_train(); svm_predict p=new svm_predict(); t.main(arg); p.main(parg); } 运行结果中各个字母的意义都可以查到，运行结果如下： 其中也许你的预测的准确率有可能没出来，可以采用不是对象调用，而是直接使用svm_predict的方法，我也不是很清楚当时就可以显示我的准确率了。 后言​ libsvm其实还需要计算出其中的最优参数c与g，这个好像要使用python的方法，当然libsvm也存在要对数据进行一个归一化的处理，好像是调用svm_scale的方法，java中的调用我没有看懂，所以只算了一个预测的准确率。推荐使用windows的方法来实现libsvm，操作简易并且不需要安软件。 Python的使用方法 Windows的使用方法]]></content>
       <categories>
-        <category>test</category>
+        <category>机器学习</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>机器学习</tag>
       </tags>
   </entry>
   <entry>

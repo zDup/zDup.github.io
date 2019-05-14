@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="test,">
+  <meta name="keywords" content="机器学习,">
 
 
 
@@ -79,18 +79,23 @@
 
 
 
-<meta name="description" content="这是我的测试zD。">
-<meta name="keywords" content="test">
+<meta name="description" content="libsvm的基本介绍Libsvm是台湾大学林智仁(Chih-Jen Lin)博士等开发设计的一个操作简单、易于使用、快速有效的通用SVM 软件包，可以解决分类问题（包括C- SVC、n - SVC ）、回归问题（包括e - SVR、n - SVR ）以及分布估计（one-class-SVM ）等问题，提供了线性、多项式、径向基和S形函数四种常用的核函数供选择，可以有效地解决多类问题、交叉验证选择">
+<meta name="keywords" content="机器学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="123">
+<meta property="og:title" content="libsvm如何在java中进行使用">
 <meta property="og:url" content="http://zDup.github.io/2019/05/08/123/index.html">
 <meta property="og:site_name" content="zDup">
-<meta property="og:description" content="这是我的测试zD。">
+<meta property="og:description" content="libsvm的基本介绍Libsvm是台湾大学林智仁(Chih-Jen Lin)博士等开发设计的一个操作简单、易于使用、快速有效的通用SVM 软件包，可以解决分类问题（包括C- SVC、n - SVC ）、回归问题（包括e - SVR、n - SVR ）以及分布估计（one-class-SVM ）等问题，提供了线性、多项式、径向基和S形函数四种常用的核函数供选择，可以有效地解决多类问题、交叉验证选择">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-08T13:11:04.193Z">
+<meta property="og:image" content="c:/Users/zD/Desktop/QQ截图20190514092722.png">
+<meta property="og:image" content="c:/Users/zD/Desktop/QQ截图20190514092556.png">
+<meta property="og:image" content="c:/Users/zD/Desktop/QQ截图20190514094808.png">
+<meta property="og:image" content="c:/Users/zD/Desktop/QQ截图20190514095725.png">
+<meta property="og:updated_time" content="2019-05-14T02:29:01.717Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="123">
-<meta name="twitter:description" content="这是我的测试zD。">
+<meta name="twitter:title" content="libsvm如何在java中进行使用">
+<meta name="twitter:description" content="libsvm的基本介绍Libsvm是台湾大学林智仁(Chih-Jen Lin)博士等开发设计的一个操作简单、易于使用、快速有效的通用SVM 软件包，可以解决分类问题（包括C- SVC、n - SVC ）、回归问题（包括e - SVR、n - SVR ）以及分布估计（one-class-SVM ）等问题，提供了线性、多项式、径向基和S形函数四种常用的核函数供选择，可以有效地解决多类问题、交叉验证选择">
+<meta name="twitter:image" content="c:/Users/zD/Desktop/QQ截图20190514092722.png">
 
 
 
@@ -126,7 +131,7 @@
 
 
 
-  <title>123 | zDup</title>
+  <title>libsvm如何在java中进行使用 | zDup</title>
   
 
 
@@ -280,7 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">123</h1>
+          <h1 class="post-title" itemprop="name headline">libsvm如何在java中进行使用</h1>
         
 
         <div class="post-meta">
@@ -315,8 +320,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/test/" itemprop="url" rel="index">
-                    <span itemprop="name">test</span>
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
                   </a>
                 </span>
 
@@ -351,7 +356,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  7
+                  1.1k
                 </span>
               
 
@@ -367,7 +372,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -388,7 +393,65 @@
       
 
       
-        <p>这是我的测试zD。</p>
+        <h1 id="libsvm的基本介绍"><a href="#libsvm的基本介绍" class="headerlink" title="libsvm的基本介绍"></a>libsvm的基本介绍</h1><p>Libsvm是台湾大学林智仁(Chih-Jen Lin)博士等开发设计的一个操作简单、易于使用、快速有效的通用SVM 软件包，可以解决分类问题（包括C- SVC、n - SVC ）、回归问题（包括e - SVR、n - SVR ）以及分布估计（one-class-SVM ）等问题，提供了线性、多项式、径向基和S形函数四种常用的核函数供选择，可以有效地解决多类问题、交叉验证选择参数、对不平衡样本加权、多类问题的概率<br>估计等。Libsvm是一个开源的软件包，需要者都可以免费的从作者的个人主页<a href="http://www.csie.ntu.edu.tw/~cjlin/" target="_blank" rel="noopener">http://www.csie.ntu.edu.tw/~cjlin/</a> 处获得。不仅提供了Libsvm的C++语言的算法源代码，还提供了Python、Java、R、MATLAB、Perl、Ruby、LabVIEW以<br>及C#.net 等各种语言的接口，可以方便的在Windows 或UNIX 平台下使用，也便于科研工作者根据自己的需要进行改进（譬如设计使用符合自己特定问题需要的核函数等）。</p>
+<h1 id="libsvm的一般使用步骤"><a href="#libsvm的一般使用步骤" class="headerlink" title="libsvm的一般使用步骤"></a>libsvm的一般使用步骤</h1><ol>
+<li><p>按照Libsvm软件包所要求的格式准备数据集；</p>
+</li>
+<li><p>对数据进行简单的缩放操作；</p>
+</li>
+<li><p>考虑选用RBF 核函数2 K(x,y) e x y = -g - ；</p>
+</li>
+<li><p>采用交叉验证选择最佳参数C与g；</p>
+</li>
+<li><p>采用最佳参数C与g对整个训练集进行训练获取支持向量机模型；</p>
+</li>
+<li><p>利用获取的模型进行测试与预测。</p>
+</li>
+</ol>
+<h1 id="libsvm中数据的预处理"><a href="#libsvm中数据的预处理" class="headerlink" title="libsvm中数据的预处理"></a>libsvm中数据的预处理</h1><p>由于libsvm实验中给出的数据并不是标准的libsvm数据模式，所以我们要对原本给出的测试数据和训练数据进行一个预处理，处理的方法我是才用的是excle的宏的使用，首先我们需要在网上下载一个叫<strong>FormatDataLibsvm.xls</strong>的一个表格。打开表格第一步一定要<strong>启用宏</strong>，这在excle的上方。</p>
+<ul>
+<li><p>在excle的文件选项中打开我们需要预处理的数据文件，打开过程中设置我们数据格式，如下图，添加空格选项。</p>
+<p><img src="C:\Users\zD\Desktop\QQ截图20190514092722.png" alt></p>
+</li>
+<li><p>然后文件导入向导一直下一步，直到完成文件导入，然后在Excel上方搜索<strong>查看宏</strong>，并选择FormatDataToLibsvm的选项，点击执行，就能成功的改变数据的模式，每一列应该都是<lable>:<data>的样子。</data></lable></p>
+</li>
+</ul>
+<p><img src="C:\Users\zD\Desktop\QQ截图20190514092556.png" alt></p>
+<h1 id="libsvm如何在java中实现"><a href="#libsvm如何在java中实现" class="headerlink" title="libsvm如何在java中实现"></a>libsvm如何在java中实现</h1><ul>
+<li><p>从介绍中的个人主页中下载资源，其中有一个java文件就是我们要使用的东西</p>
+</li>
+<li><p>创建一个项目，在创建两个包，一个来包导入java文件中libsvm文件的内容，也可以复制粘贴到我们命名libsvm的这个包中，另一个包来写存java根目录下的四个java文件，之后我会把我的数据文件和主函数comMain（自己创建）都会放在这个包中进行操作。大概情况如下：</p>
+</li>
+</ul>
+<p><img src="C:\Users\zD\Desktop\QQ截图20190514094808.png" alt></p>
+<ul>
+<li><p>libsvm的使用主要是代码的调用，其中的数据文件中需要四个文本，一个测试数据test.txt，一个训练数据train.txt，一个模型数据moder_r .txt,一个输出数据out_r.txt，数据文件的路径可以随便放，但一定要知道路径，主函数代码如下：</p>
+<pre><code>public static void main(String[] args)  throws IOException {
+    // TODO Auto-generated method stub
+
+ String[] arg= {&quot;G:\\java\\libsvm\\src\\service\\trainfile\\trainSVM.txt&quot;,
+         &quot;G:\\java\\libsvm\\src\\service\\trainfile\\model_r.txt&quot;};
+ String  []parg= {&quot;G:\\java\\libsvm\\src\\service\\trainfile\\testSVM.txt&quot;,
+         &quot;G:\\java\\libsvm\\src\\service\\trainfile\\model_r.txt&quot;,&quot;G:\\java\\libsvm\\src\\service\\trainfile\\out_r.txt&quot;};
+ System.out.println(&quot;.....SVM运行开始. . . . . .&quot;);
+ svm_train t=new svm_train();
+ svm_predict p=new svm_predict();
+ t.main(arg);
+ p.main(parg);
+
+}
+</code></pre></li>
+</ul>
+<ul>
+<li><p>运行结果中各个字母的意义都可以查到，运行结果如下： </p>
+<p><img src="C:\Users\zD\Desktop\QQ截图20190514095725.png" alt></p>
+</li>
+<li><p>其中也许你的预测的准确率有可能没出来，可以采用不是对象调用，而是直接使用svm_predict的方法，我也不是很清楚当时就可以显示我的准确率了。</p>
+</li>
+</ul>
+<h2 id="后言"><a href="#后言" class="headerlink" title="后言"></a>后言</h2><p>​     libsvm其实还需要计算出其中的最优参数c与g，这个好像要使用python的方法，当然libsvm也存在要对数据进行一个归一化的处理，好像是调用svm_scale的方法，java中的调用我没有看懂，所以只算了一个预测的准确率。推荐使用windows的方法来实现libsvm，操作简易并且不需要安软件。</p>
+<p> <a href="1、&lt;http://blog.csdn.net/chl033/article/details/4645544">Python的使用方法</a></p>
+<p><a href="https://www.tanglei.name/blog/an-example-for-beginning-to-learn-libsvm.html" target="_blank" rel="noopener">Windows的使用方法</a></p>
 
       
     </div>
@@ -406,9 +469,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/test/" rel="tag"><i class="fa fa-tag"></i>
+            <a href="/tags/机器学习/" rel="tag"><i class="fa fa-tag"></i>
 
- test</a>
+ 机器学习</a>
           
         </div>
       
@@ -481,8 +544,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -510,7 +582,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -521,7 +593,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -560,6 +632,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#libsvm的基本介绍"><span class="nav-number">1.</span> <span class="nav-text">libsvm的基本介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#libsvm的一般使用步骤"><span class="nav-number">2.</span> <span class="nav-text">libsvm的一般使用步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#libsvm中数据的预处理"><span class="nav-number">3.</span> <span class="nav-text">libsvm中数据的预处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#libsvm如何在java中实现"><span class="nav-number">4.</span> <span class="nav-text">libsvm如何在java中实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#后言"><span class="nav-number">4.1.</span> <span class="nav-text">后言</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -602,7 +690,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12字</span>
+  <span class="post-count">博客全站共1.1k字</span>
 </div>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
         

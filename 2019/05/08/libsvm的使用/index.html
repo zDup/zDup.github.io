@@ -83,19 +83,19 @@
 <meta name="keywords" content="机器学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="libsvm如何在java中进行使用">
-<meta property="og:url" content="http://zDup.github.io/2019/05/08/123/index.html">
+<meta property="og:url" content="http://zDup.github.io/2019/05/08/libsvm的使用/index.html">
 <meta property="og:site_name" content="zDup">
 <meta property="og:description" content="libsvm的基本介绍Libsvm是台湾大学林智仁(Chih-Jen Lin)博士等开发设计的一个操作简单、易于使用、快速有效的通用SVM 软件包，可以解决分类问题（包括C- SVC、n - SVC ）、回归问题（包括e - SVR、n - SVR ）以及分布估计（one-class-SVM ）等问题，提供了线性、多项式、径向基和S形函数四种常用的核函数供选择，可以有效地解决多类问题、交叉验证选择">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="c:/Users/zD/Desktop/QQ截图20190514092722.png">
-<meta property="og:image" content="c:/Users/zD/Desktop/QQ截图20190514092556.png">
-<meta property="og:image" content="c:/Users/zD/Desktop/QQ截图20190514094808.png">
-<meta property="og:image" content="c:/Users/zD/Desktop/QQ截图20190514095725.png">
-<meta property="og:updated_time" content="2019-05-14T02:29:01.717Z">
+<meta property="og:image" content="http://zdup.github.io/2019/05/08/libsvm的使用/lisvm1.png">
+<meta property="og:image" content="http://zdup.github.io/2019/05/08/libsvm的使用/libsvm.png">
+<meta property="og:image" content="http://zdup.github.io/2019/05/08/libsvm的使用/libsvm2.png">
+<meta property="og:image" content="http://zdup.github.io/2019/05/08/libsvm的使用/libsvm3.png">
+<meta property="og:updated_time" content="2019-05-14T02:53:44.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="libsvm如何在java中进行使用">
 <meta name="twitter:description" content="libsvm的基本介绍Libsvm是台湾大学林智仁(Chih-Jen Lin)博士等开发设计的一个操作简单、易于使用、快速有效的通用SVM 软件包，可以解决分类问题（包括C- SVC、n - SVC ）、回归问题（包括e - SVR、n - SVR ）以及分布估计（one-class-SVM ）等问题，提供了线性、多项式、径向基和S形函数四种常用的核函数供选择，可以有效地解决多类问题、交叉验证选择">
-<meta name="twitter:image" content="c:/Users/zD/Desktop/QQ截图20190514092722.png">
+<meta name="twitter:image" content="http://zdup.github.io/2019/05/08/libsvm的使用/lisvm1.png">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="http://zDup.github.io/2019/05/08/123/">
+  <link rel="canonical" href="http://zDup.github.io/2019/05/08/libsvm的使用/">
 
 
 
@@ -268,7 +268,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zDup.github.io/2019/05/08/123/">
+    <link itemprop="mainEntityOfPage" href="http://zDup.github.io/2019/05/08/libsvm的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zDup">
@@ -411,19 +411,19 @@
 <h1 id="libsvm中数据的预处理"><a href="#libsvm中数据的预处理" class="headerlink" title="libsvm中数据的预处理"></a>libsvm中数据的预处理</h1><p>由于libsvm实验中给出的数据并不是标准的libsvm数据模式，所以我们要对原本给出的测试数据和训练数据进行一个预处理，处理的方法我是才用的是excle的宏的使用，首先我们需要在网上下载一个叫<strong>FormatDataLibsvm.xls</strong>的一个表格。打开表格第一步一定要<strong>启用宏</strong>，这在excle的上方。</p>
 <ul>
 <li><p>在excle的文件选项中打开我们需要预处理的数据文件，打开过程中设置我们数据格式，如下图，添加空格选项。</p>
-<p><img src="C:\Users\zD\Desktop\QQ截图20190514092722.png" alt></p>
+<p><img src="/2019/05/08/libsvm的使用/lisvm1.png" alt></p>
 </li>
 <li><p>然后文件导入向导一直下一步，直到完成文件导入，然后在Excel上方搜索<strong>查看宏</strong>，并选择FormatDataToLibsvm的选项，点击执行，就能成功的改变数据的模式，每一列应该都是<lable>:<data>的样子。</data></lable></p>
 </li>
 </ul>
-<p><img src="C:\Users\zD\Desktop\QQ截图20190514092556.png" alt></p>
+<p><img src="/2019/05/08/libsvm的使用/libsvm.png" alt></p>
 <h1 id="libsvm如何在java中实现"><a href="#libsvm如何在java中实现" class="headerlink" title="libsvm如何在java中实现"></a>libsvm如何在java中实现</h1><ul>
 <li><p>从介绍中的个人主页中下载资源，其中有一个java文件就是我们要使用的东西</p>
 </li>
 <li><p>创建一个项目，在创建两个包，一个来包导入java文件中libsvm文件的内容，也可以复制粘贴到我们命名libsvm的这个包中，另一个包来写存java根目录下的四个java文件，之后我会把我的数据文件和主函数comMain（自己创建）都会放在这个包中进行操作。大概情况如下：</p>
 </li>
 </ul>
-<p><img src="C:\Users\zD\Desktop\QQ截图20190514094808.png" alt></p>
+<p><img src="/2019/05/08/libsvm的使用/libsvm2.png" alt></p>
 <ul>
 <li><p>libsvm的使用主要是代码的调用，其中的数据文件中需要四个文本，一个测试数据test.txt，一个训练数据train.txt，一个模型数据moder_r .txt,一个输出数据out_r.txt，数据文件的路径可以随便放，但一定要知道路径，主函数代码如下：</p>
 <pre><code>public static void main(String[] args)  throws IOException {
@@ -444,7 +444,7 @@
 </ul>
 <ul>
 <li><p>运行结果中各个字母的意义都可以查到，运行结果如下： </p>
-<p><img src="C:\Users\zD\Desktop\QQ截图20190514095725.png" alt></p>
+<p><img src="/2019/05/08/libsvm的使用/libsvm3.png" alt></p>
 </li>
 <li><p>其中也许你的预测的准确率有可能没出来，可以采用不是对象调用，而是直接使用svm_predict的方法，我也不是很清楚当时就可以显示我的准确率了。</p>
 </li>

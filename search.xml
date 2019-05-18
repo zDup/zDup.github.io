@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[约瑟夫问题]]></title>
+    <url>%2F2019%2F05%2F18%2F%E7%BA%A6%E7%91%9F%E5%A4%AB%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[约瑟夫问题的实现算法题目n个人围成一个圈，每个人分别标注为1、2、…、n，要求从1号从1开始报数，报到k的人出圈，接着下一个人又从1开始报数，如此循环，直到只剩最后一个人时，该人即为胜利者。例如当n=10,k=4时，依次出列的人分别为4、8、2、7、3、10，9、1、6、5，则5号位置的人为胜利者。给定n个人，请你编程计算出最后胜利者标号数。（要求用单循环链表完成。） 输入12第一行为人数n;第二行为报数k。 输出1输出最后胜利者的标号数。 样例输入1210 4 样例输出15 算法分析由于是约瑟夫问题，这是一个超经典的一个题目，其中以前试过用数组做，不过好像要模拟其中的过程，所以其中的思维必须要清晰，而约瑟夫问题用单循环链表来做，逻辑会变得非常的简单，写下这篇博客，也是想记录链表的创建与删除，在约瑟夫问题上，链表真的起到了很大的作用。 算法代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556#include&quot;iostream&quot;#include&quot;cmath&quot;#include&quot;cstring&quot;#include&quot;stdlib.h&quot;using namespace std;typedef struct node&#123; int data; node *next;&#125;Link;void creat(Link *&amp;L,int n) //创建链表 &#123; Link *p; Link *r; L=(Link *)malloc(sizeof(Link)); L-&gt;data=1; L-&gt;next=r; r=L; for(int i=2;i&lt;n+1;i++) &#123; p=(Link *)malloc(sizeof(Link)); p-&gt;data=i; r-&gt;next=p; r=p; &#125; r-&gt;next=L; L=r;&#125;int main()&#123; int n,k; cin&gt;&gt;n&gt;&gt;k; Link *L; Link *p; creat(L,n); int flag=1; //判断是否删除结点 while(L!=L-&gt;next) &#123; if(flag==k) &#123; p=L-&gt;next; L-&gt;next=p-&gt;next; free(p); flag=1; &#125; else &#123; L=L-&gt;next; flag++; &#125; &#125; cout&lt;&lt;L-&gt;data; return 0;&#125;]]></content>
+      <categories>
+        <category>算法分析</category>
+      </categories>
+      <tags>
+        <tag>算法分析之单循环链表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[简单背包问题]]></title>
     <url>%2F2019%2F05%2F16%2F%E7%AE%80%E5%8D%95%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[背包问题算法题目设有一个背包可以放入的物品重量为S，现有n件物品，重量分别是w1，w2，w3，…Wn。 问能否从这n件物品中选择若干件放入背包中，使得放入的重量之和正好为S。 如果有满足条件的选择，则此背包有解，否则此背包问题无解 输入12输入数据有多行，包括放入的物品重量为s，物品的件数n，以及每件物品的重量（输入数据均为正整数）多组测试数据。 输出对于每个测试实例，若满足条件则输出“YES”，若不满足则输出“NO“ 样例输入1220 51 3 5 7 9 样例输出1YES 算法分析这是一个典型的动态规划问题，动态规划问题需要我们想的比较抽象一点，并且他常常又与递归结合，寻找最终的结果需要我们结合问题找到根本的执行步骤，例如此题，我们可以看作我们先找到目标的部分重量，然后再看剩下的目标重量是否能够通过我们已有的重量刚刚合适。W(n)=W(n-1)+Wi;其中Wi就是我们先找到的部分重量。 算法代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546#include&lt;iostream&gt;using namespace std;int s,n;int flag=0;int a[10001];void Bag(int weight,int number)&#123; if(weight&gt;0&amp;&amp;number&gt;=0) &#123; for(int i=0;i&lt;number;i++) &#123; Bag(weight-a[number-i],number-1); &#125; &#125; else if(weight==0) &#123; flag=1; &#125; else if(number==0||weight&lt;0) &#123; return; &#125; &#125;int main()&#123; while(cin&gt;&gt;s&gt;&gt;n) &#123; for(int i=0;i&lt;n;i++) &#123; cin&gt;&gt;a[i]; &#125; Bag(s,n-1); if(flag==1) &#123; cout&lt;&lt;&quot;YES&quot;; &#125; else &#123; cout&lt;&lt;&quot;NO&quot;; &#125; cout&lt;&lt;endl; flag=0; &#125; return 0;&#125;]]></content>

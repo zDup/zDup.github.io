@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[汇编入门]]></title>
+    <url>%2F2019%2F05%2F22%2F%E6%B1%87%E7%BC%96%E5%85%A5%E9%97%A8%2F</url>
+    <content type="text"><![CDATA[汇编机器的一些机器指令的使用如何在win10下写自己的汇编代码在以往的系统中，我们都可以通过我们的命令行cmd来写我们的汇编的程序，而在win10的环境下,则需要下一个软件DOSBox 0.74-2，然后通过这个软件在进行我们的汇编编程。以下是该软件具体安装与使用： 汇编笔记-DOSBox安装和使用 汇编实验一机器指令的使用的一些心得汇编实验题目12345678910111213141516171、使用debug，将下面程序段写入内存，逐条执行，根据指令执行后的实际情况填空。mov ax,ffffhmov ds,axmov ax,2200hmov ss,axmov sp,0100mov ax,[0] ;(ax=) add ax,[2] ;(ax=) mov bx,[4] ;(bx=) add bx,[6] ;(bx=) push ax ;(sp=) ；修改的内存单元的地址是 ；内容是 push bx ;(sp=) ；修改的内存单元的地址是 ；内容是 pop ax ;(sp=) ；（ax）= pop bx ;(sp=) ；（ax）= push [4] ;(sp=) ；修改的内存单元的地址是 ；内容是 pop [6] ;(sp=) ；修改的内存单元的地址是 ；内容是 2、重新执行上面的程序。在执行前4条语句后，使用-e 0FFFF:0 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8，再执行后面的语句，每条语句的执行结果会有什么变化？为什么？ 汇编的一些使用心得开始没有认真的审题，所以开始我是把程序是写在了一个记事本，但我建议大家还是先下一个Notepad++的一个记事本，通过他来写我们的汇编代码，因为他会有明确的行数，在我们出现errror的时候，我们就可以更快的找到错误。 当然写在asm文件的程序之前，需要我们有安装步骤中的四个exe文件，不然无法使用，对于我们的文件需要我们先masm 【我们的文件】.asm ，进行一个编译，如果你的代码没有错误，则service error 和warning error 应该都为0，之后我们就可以link我们的成功的文件：link 【我们的文件】.obj；记住是obj，不要忘记了。其中问你是不是创建obj，exe什么的直接回车就行了。 如何运行我们的程序呢？之后直接我们的【我们的文件】.exe就行了。 汇编的一些经常使用的指令a指令 debug之后输入的编译指令，输入我们的代码就行，之后你不想输入时，直接两次回车，我们就可以 输入我们的其他机器指令了 t指令 这是逐步执行我们的指令，然后我们就可以看里面的寄存器的具体情况了，当然还有每一步中的指令。这也是调试必用指令。 r指令 这是一个修改，查看cpu寄存器的一个指令，没有怎么使用过 d指令 这是查看我们内存内容。 q指令 退出我们的debug，非常重要 汇编运行过程中的一些图 t命令的使用： d命令的使用： 最后有些讲的不是很详细，主要还是看我链接的博客。]]></content>
+      <categories>
+        <category>汇编</category>
+      </categories>
+      <tags>
+        <tag>汇编入门</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[约瑟夫问题]]></title>
     <url>%2F2019%2F05%2F18%2F%E7%BA%A6%E7%91%9F%E5%A4%AB%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[约瑟夫问题的实现算法题目n个人围成一个圈，每个人分别标注为1、2、…、n，要求从1号从1开始报数，报到k的人出圈，接着下一个人又从1开始报数，如此循环，直到只剩最后一个人时，该人即为胜利者。例如当n=10,k=4时，依次出列的人分别为4、8、2、7、3、10，9、1、6、5，则5号位置的人为胜利者。给定n个人，请你编程计算出最后胜利者标号数。（要求用单循环链表完成。） 输入12第一行为人数n;第二行为报数k。 输出1输出最后胜利者的标号数。 样例输入1210 4 样例输出15 算法分析由于是约瑟夫问题，这是一个超经典的一个题目，其中以前试过用数组做，不过好像要模拟其中的过程，所以其中的思维必须要清晰，而约瑟夫问题用单循环链表来做，逻辑会变得非常的简单，写下这篇博客，也是想记录链表的创建与删除，在约瑟夫问题上，链表真的起到了很大的作用。 算法代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556#include&quot;iostream&quot;#include&quot;cmath&quot;#include&quot;cstring&quot;#include&quot;stdlib.h&quot;using namespace std;typedef struct node&#123; int data; node *next;&#125;Link;void creat(Link *&amp;L,int n) //创建链表 &#123; Link *p; Link *r; L=(Link *)malloc(sizeof(Link)); L-&gt;data=1; L-&gt;next=r; r=L; for(int i=2;i&lt;n+1;i++) &#123; p=(Link *)malloc(sizeof(Link)); p-&gt;data=i; r-&gt;next=p; r=p; &#125; r-&gt;next=L; L=r;&#125;int main()&#123; int n,k; cin&gt;&gt;n&gt;&gt;k; Link *L; Link *p; creat(L,n); int flag=1; //判断是否删除结点 while(L!=L-&gt;next) &#123; if(flag==k) &#123; p=L-&gt;next; L-&gt;next=p-&gt;next; free(p); flag=1; &#125; else &#123; L=L-&gt;next; flag++; &#125; &#125; cout&lt;&lt;L-&gt;data; return 0;&#125;]]></content>

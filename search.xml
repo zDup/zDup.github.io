@@ -3,18 +3,13 @@
   <entry>
     <title><![CDATA[测试]]></title>
     <url>%2F2020%2F01%2F04%2F%E6%B5%8B%E8%AF%95%2F</url>
-    <content type="text"><![CDATA[测试整一个 asdfadsf]]></content>
+    <content type="text"><![CDATA[测试 奥力给]]></content>
       <categories>
-        <category>算法分析</category>
+        <category>test</category>
       </categories>
       <tags>
-        <tag>算法分析之单循环链表</tag>
+        <tag>test</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Coin-collecting by robot]]></title>
-    <url>%2F2019%2F06%2F30%2FCoin-collecting-by-robot%2F</url>
-    <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[汇编入门]]></title>
@@ -61,24 +56,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[test1]]></title>
-    <url>%2F2019%2F05%2F08%2Ftest1%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[test]]></title>
     <url>%2F2019%2F05%2F08%2Ftest%2F</url>
-    <content type="text"><![CDATA[这个是测试]]></content>
-      <categories>
-        <category>test</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2F2019%2F05%2F08%2Ftest%20-%20%E5%89%AF%E6%9C%AC%2F</url>
     <content type="text"><![CDATA[这个是测试]]></content>
       <categories>
         <category>test</category>

@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[测试]]></title>
     <url>%2F2020%2F01%2F04%2F%E6%B5%8B%E8%AF%95%2F</url>
-    <content type="text"><![CDATA[测试整一个]]></content>
+    <content type="text"><![CDATA[测试整一个 asdfadsf]]></content>
       <categories>
         <category>算法分析</category>
       </categories>
@@ -67,7 +67,7 @@
   </entry>
   <entry>
     <title><![CDATA[test]]></title>
-    <url>%2F2019%2F05%2F08%2Ftest%20-%20%E5%89%AF%E6%9C%AC%2F</url>
+    <url>%2F2019%2F05%2F08%2Ftest%2F</url>
     <content type="text"><![CDATA[这个是测试]]></content>
       <categories>
         <category>test</category>
@@ -78,7 +78,7 @@
   </entry>
   <entry>
     <title><![CDATA[test]]></title>
-    <url>%2F2019%2F05%2F08%2Ftest%2F</url>
+    <url>%2F2019%2F05%2F08%2Ftest%20-%20%E5%89%AF%E6%9C%AC%2F</url>
     <content type="text"><![CDATA[这个是测试]]></content>
       <categories>
         <category>test</category>
